@@ -23,6 +23,7 @@ The skill bans fabricated content by design: no invented metrics, reviews, price
 | `references/structures.md` | 10 page shapes + domain trios |
 | `references/identities.md` | 20 identities (palette + type + evidence) |
 | `examples/demo.html` | Full worked demo: "Meet India Journeys" Kerala travel page (Scroll Story × Forest Confection) — real photos with on-image CC attributions |
+| `promo/` | Launch kit: 20s intro reel (MP4) + 6-slide carousel (PNG × 6 + editable `carousel.html`) |
 | `scripts/check-skill.js` | Validates SKILL.md + references (gate numbering, refs, identity shape counts) |
 
 ## Install (OpenCode)
@@ -30,7 +31,7 @@ The skill bans fabricated content by design: no invented metrics, reviews, price
 Copy or clone this folder into your OpenCode skills directory:
 
 ```powershell
-git clone https://github.com/Heamnt-beginner/signature-skill "$env:USERPROFILE\.config\opencode\skills\signature"
+git clone https://github.com/Heamnt-beginner/frontend-design-skill "$env:USERPROFILE\.config\opencode\skills\signature"
 ```
 
 The repo root *is* the skill root, so the clone lands ready. In OpenCode it appears as the `signature` skill (slash: `/signature`). Requires the `frontend-design` skill next to it for the craft layer; `context7` MCP optional.

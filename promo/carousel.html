@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>signature — carousel</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --ink: #10241B;
+  --cream: #F0EAD8;
+  --cocoa: #5B3A24;
+  --sand: #C9BE9B;
+  --leaf: #1E5C40;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { overflow-x: clip; }
+body { background: var(--ink); font: 400 40px/1.5 "Archivo", sans-serif; }
+.slide {
+  position: relative;
+  width: 1080px;
+  height: 1350px;
+  padding: 110px 96px 150px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+.slide.dark  { background: var(--ink); color: var(--cream); }
+.slide.light { background: var(--cream); color: var(--ink); }
+.kicker { font-size: 27px; font-weight: 600; letter-spacing: 6px; margin-bottom: 40px; }
+h1 { font-family: "Anton", sans-serif; font-weight: 400; font-size: 112px; line-height: 1.05; overflow-wrap: anywhere; }
+h1.big { font-size: 200px; }
+.sub { font-size: 40px; line-height: 1.5; max-width: 640px; }
+.dark .sub, .dark .kicker { color: var(--sand); }
+.light .sub, .light .kicker { color: var(--cocoa); }
+.accent { color: var(--leaf); }
+.num { font-family: "Anton", sans-serif; color: var(--cocoa); }
+/* chrome */
+.mark { font-family: "Anton", sans-serif; font-size: 30px; letter-spacing: 1px; position: absolute; top: 62px; left: 96px; }
+.count { font-family: "Anton", sans-serif; font-size: 30px; position: absolute; top: 62px; right: 96px; }
+.bar { position: absolute; bottom: 0; left: 0; right: 0; height: 12px; background: rgba(255,255,255,.14); }
+.bar i { display: block; height: 100%; background: var(--cocoa); }
+/* slides */
+.rows { margin-top: 70px; display: grid; gap: 30px; }
+.row { display: flex; align-items: baseline; gap: 26px; font-size: 40px; }
+.row b { font-size: 40px; font-weight: 600; }
+.strike { color: var(--cocoa); font-weight: 600; text-decoration: line-through; text-decoration-thickness: 3px; }
+.steps { margin-top: 76px; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 42px; }
+.step { border-top: 3px solid currentColor; padding-top: 26px; }
+.step .num { font-size: 88px; }
+.step h2 { font-size: 44px; font-family: "Anton", sans-serif; font-weight: 400; margin: 6px 0 10px; }
+.step p { font-size: 32px; opacity: .78; line-height: 1.4; }
+.dark .step { color: var(--cream); }
+.dark .step .num { color: var(--sand); }
+.gates { margin-top: 64px; display: grid; gap: 26px; }
+.gates p { font-size: 38px; }
+.stampbox { margin-top: auto; border: 3px solid var(--cocoa); padding: 34px 40px; font-size: 26px; line-height: 1.55; color: var(--cocoa); overflow-wrap: anywhere; }
+.chips { display: flex; gap: 18px; margin-top: 60px; }
+.chip { width: 132px; height: 132px; border-radius: 6px; border: 2px solid rgba(0,0,0,.08); }
+.chip span { display: block; margin-top: 12px; font-size: 22px; text-align: center; color: var(--sand); font-family: "Archivo", sans-serif; }
+.type { margin-top: 66px; }
+.type .a { font-family: "Anton", sans-serif; font-size: 88px; line-height: 1.05; }
+.type .b { font-size: 40px; margin-top: 14px; }
+.cta { background: var(--cocoa); color: var(--cream); padding: 30px 38px; font-size: 30px; margin-top: 74px; overflow-wrap: anywhere; font-family: "Archivo", sans-serif; }
+.cta small { display: block; font-size: 24px; color: var(--sand); margin-top: 10px; }
+</style>
+</head>
+<body>
+
+<section class="slide dark" aria-label="Slide 1 of 6">
+  <span class="mark">signature</span><span class="count">01 / 06</span>
+  <div style="margin-top:auto">
+    <p class="kicker">AN OPENCODE SKILL</p>
+    <h1 class="big">signature</h1>
+    <p class="sub" style="margin-top:36px">The decision engine for AI web design. It picks the page shape, the identity — then enforces both.</p>
+    <p class="sub" style="margin-top:52px; font-family:'Anton',sans-serif; font-size:42px">github.com/Heamnt-beginner/frontend-design-skill</p>
+  </div>
+  <span class="bar"><i style="width:16.6%"></i></span>
+</section>
+
+<section class="slide light" aria-label="Slide 2 of 6">
+  <span class="mark">signature</span><span class="count">02 / 06</span>
+  <p class="kicker">THE DEFAULT TRAP</p>
+  <h1>Every AI page looks recently generated.</h1>
+  <div class="rows">
+    <div class="row"><b>Ten page shapes, none picked.</b></div>
+    <div class="row"><b>Twenty palettes, all sampled.</b></div>
+    <div class="row"><b>No receipts — designed from memory.</b></div>
+  </div>
+  <p class="sub" style="margin-top:auto">signature makes the model commit — to one named shape, one named identity, with evidence.</p>
+  <span class="bar"><i style="width:33.3%"></i></span>
+</section>
+
+<section class="slide dark" aria-label="Slide 3 of 6">
+  <span class="mark">signature</span><span class="count">03 / 06</span>
+  <p class="kicker">THE PIPELINE</p>
+  <h1>Four steps, all evidence-tagged.</h1>
+  <div class="steps">
+    <div class="step"><p class="num">01</p><h2>Shape</h2><p>Pick one from your domain's trio — under 6 minutes.</p></div>
+    <div class="step"><p class="num">02</p><h2>Evidence</h2><p>Open the reference sites live. No from-memory design.</p></div>
+    <div class="step"><p class="num">03</p><h2>Identity</h2><p>One of 20 named palettes and type pairings.</p></div>
+    <div class="step"><p class="num">04</p><h2>Gates</h2><p>20 mechanical checks before anything ships.</p></div>
+  </div>
+  <span class="bar"><i style="width:50%"></i></span>
+</section>
+
+<section class="slide light" aria-label="Slide 4 of 6">
+  <span class="mark">signature</span><span class="count">04 / 06</span>
+  <p class="kicker">THE GATES</p>
+  <h1>20 mechanical gates. Fabricated facts banned.</h1>
+  <div class="gates">
+    <p>▸ gone — <span class="strike text-strike">fake metrics, reviews, prices</span></p>
+    <p>▸ enforced — single-line CTAs, named transitions, reduced-motion fallback</p>
+    <p>▸ recorded — the ledger stamp lists only URLs actually opened</p>
+  </div>
+  <p class="sub" style="margin-top:auto">Placeholder slots say “confirm” — never invent. Honesty is a build gate, not a vibe.</p>
+  <span class="bar"><i style="width:66.6%"></i></span>
+</section>
+
+<section class="slide dark" aria-label="Slide 5 of 6">
+  <span class="mark">signature</span><span class="count">05 / 06</span>
+  <p class="kicker">TRIED IT LIVE</p>
+  <h1>A Kerala travel page. Scroll Story × Forest Confection.</h1>
+  <div class="chips">
+    <div class="chip" style="background:#10241B"><span>ink</span></div>
+    <div class="chip" style="background:#F0EAD8"><span style="color:#5B3A24">cream</span></div>
+    <div class="chip" style="background:#5B3A24"><span>cocoa</span></div>
+    <div class="chip" style="background:#1E5C40"><span>leaf</span></div>
+  </div>
+  <div class="type">
+    <p class="a">Meet India, slowly.</p>
+    <p class="b">Anton display + Archivo body — five real Commons photos, attributed on-image.</p>
+  </div>
+  <p class="sub" style="margin-top:auto">Conceived, built, gated and critiqued in one session.</p>
+  <span class="bar"><i style="width:83.3%"></i></span>
+</section>
+
+<section class="slide light" aria-label="Slide 6 of 6">
+  <span class="mark">signature</span><span class="count">06 / 06</span>
+  <p class="kicker">YOUR TURN</p>
+  <h1>Clone it. Drop it in your skills folder.</h1>
+  <p class="sub" style="margin-top:44px">Then type <span class="accent" style="font-weight:600">/signature</span> in OpenCode and describe what to build.</p>
+  <div class="cta">git clone https://github.com/Heamnt-beginner/frontend-design-skill<small>MIT licensed · node scripts/check-skill.js to validate · logo stamp: /* signature: shape identity refs */</small></div>
+  <span class="bar"><i style="width:100%"></i></span>
+</section>
+
+</body>
+</html>
