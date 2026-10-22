@@ -23,7 +23,6 @@ The skill bans fabricated content by design: no invented metrics, reviews, price
 | `references/structures.md` | 10 page shapes + domain trios |
 | `references/identities.md` | 20 identities (palette + type + evidence) |
 | `examples/demo.html` | Full worked demo: "Meet India Journeys" Kerala travel page (Scroll Story × Forest Confection) — real photos with on-image CC attributions |
-| `promo/` | Launch kit: 20s intro reel (MP4) + 6-slide carousel (PNG × 6 + editable `carousel.html`) |
 | `scripts/check-skill.js` | Validates SKILL.md + references (gate numbering, refs, identity shape counts) |
 
 ## Install (OpenCode)
