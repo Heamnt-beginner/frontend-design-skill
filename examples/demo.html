@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Meet India Journeys — Kerala river and heritage journeys (demo)</title>
+<meta name="description" content="Demo page for Meet India Journeys — a river-and-heritage journey through Kerala: Kochi harbour, backwaters, Periyar forest, Munnar tea hills.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+/* signature: shape=Scroll Story identity=Forest Confection refs=apple.com,simplychocolate.dk */
+
+:root {
+  --ink: #10241B;        /* deep forest green-black */
+  --paper: #F0EAD8;      /* warm cream */
+  --cocoa: #5B3A24;      /* confection accent */
+  --leaf: #1E5C40;       /* supporting green, restricted */
+  --line: rgba(16, 36, 27, .22);
+  --paper-soft: #E9E1CC;
+  --display: "Anton", "Arial Narrow", sans-serif;
+  --body: "Archivo", "Segoe UI", sans-serif;
+}
+
+/* gate 4 */
+html, body { overflow-x: clip; }
+body { margin: 0; background: var(--paper); color: var(--ink); font: 400 1.0625rem/1.6 var(--body); }
+* { box-sizing: border-box; }
+img { display: block; max-width: 100%; height: auto; }
+a { color: inherit; }
+:focus-visible { outline: 2px solid var(--cocoa); outline-offset: 3px; }
+
+.skip { position: absolute; left: -999px; top: 0; background: var(--ink); color: var(--paper); padding: .5rem 1rem; }
+.skip:focus { left: 0; z-index: 10; }
+
+.wrap { max-width: 1200px; margin-inline: auto; padding-inline: clamp(1rem, 4vw, 2.5rem); }
+
+/* header */
+.top { border-bottom: 2px solid var(--cocoa); }
+.top .wrap { display: flex; align-items: baseline; justify-content: space-between; gap: 1rem; padding-block: .9rem; flex-wrap: wrap; }
+.wordmark { font-family: var(--display); font-size: 1.15rem; letter-spacing: .03em; text-decoration: none; }
+.topnav { display: flex; gap: 1.4rem; font-size: .95rem; }
+.topnav a { text-decoration-thickness: 1px; text-underline-offset: 3px; }
+
+/* hero */
+.hero { position: relative; min-height: 86vh; display: grid; align-items: end; }
+.hero img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.hero::after { content: ""; position: absolute; inset: 0; background: linear-gradient(to top, rgba(16,36,27,.92) 0%, rgba(16,36,27,.58) 42%, rgba(16,36,27,.16) 75%, rgba(16,36,27,.4) 100%); }
+.hero .wrap { position: relative; z-index: 1; color: var(--paper); padding-block: clamp(3rem, 8vh, 5rem) clamp(2.5rem, 7vh, 4.5rem); }
+.kicker { font-size: 1rem; font-weight: 600; color: var(--paper); margin: 0 0 .6rem; }
+.kicker span { color: #C9BE9B; }
+h1 { font-family: var(--display); font-weight: 400; font-size: clamp(3rem, 8.5vw, 6.2rem); line-height: 1.04; margin: 0 0 .8rem; max-width: 14ch; /* gate 6 */ overflow-wrap: anywhere; }
+.hero p { max-width: 44ch; margin: 0 0 1.6rem; font-weight: 500; }
+
+/* buttons — white-space nowrap = gate 7 */
+.btn { display: inline-block; background: var(--cocoa); color: var(--paper); font: 600 1rem var(--body); padding: .85rem 1.7rem; border: 0; border-radius: 2px; text-decoration: none; white-space: nowrap; /* the one hover effect = gate 9 */ transition: background-color .2s ease; }
+.btn:hover { background: var(--ink); }
+
+/* chapters */
+.chapter { padding-block: clamp(3rem, 9vh, 6rem); border-top: 2px solid var(--cocoa); }
+.chapter .wrap { display: grid; grid-template-columns: minmax(0, 1.08fr) minmax(0, 1fr); gap: clamp(1.5rem, 4vw, 3.5rem); align-items: center; }
+.chapter.flip .wrap { direction: rtl; }
+.chapter.flip .chapter-copy, .chapter.flip figure { direction: ltr; }
+
+figure { margin: 0; position: relative; }
+.chapter figure img { width: 100%; aspect-ratio: 3 / 2; object-fit: cover; }
+figcaption { background: var(--cocoa); color: var(--paper); font-size: .75rem; letter-spacing: .02em; padding: .45rem .8rem; }
+figcaption a { color: inherit; }
+
+.num { font-family: var(--display); font-size: 1.6rem; color: var(--cocoa); margin: 0 0 .4rem; }
+.place { font-size: .95rem; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; color: var(--leaf); margin: 0 0 .9rem; }
+h2.chtitle { font-family: var(--display); font-weight: 400; font-size: clamp(2rem, 4.5vw, 3.4rem); line-height: 1.06; margin: 0 0 1rem; /* gate 6 */ overflow-wrap: anywhere; max-width: 16ch; }
+.chapter-copy p { max-width: 46ch; margin: 0; }
+
+/* route */
+.route { background: var(--ink); color: var(--paper); padding-block: clamp(3rem, 9vh, 5.5rem); border-top: 2px solid var(--cocoa); }
+.route h2 { font-family: var(--display); font-weight: 400; font-size: clamp(2rem, 4.5vw, 3.2rem); line-height: 1.06; margin: 0 0 2rem; /* gate 6 */ overflow-wrap: anywhere; }
+.route-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1.5rem; }
+.leg { border-top: 2px solid var(--cocoa); padding-top: .8rem; }
+.leg .num { font-size: 2.2rem; color: #C9BE9B; }
+.leg h3 { font-family: var(--display); font-weight: 400; font-size: 1.3rem; margin: .1rem 0 .35rem; letter-spacing: .02em; }
+.leg p { margin: 0; font-size: .95rem; color: #D8D2BE; }
+.route > .wrap > p { color: #D8D2BE; margin: 2.2rem 0 0; max-width: 40ch; }
+
+/* CTA */
+.plan { padding-block: clamp(3.5rem, 10vh, 6.5rem); border-top: 2px solid var(--cocoa); text-align: left; }
+.plan h2 { font-family: var(--display); font-weight: 400; font-size: clamp(2.2rem, 5vw, 4rem); line-height: 1.06; margin: 0 0 1rem; /* gate 6 */ overflow-wrap: anywhere; }
+.plan p { margin: 0 0 1.8rem; color: var(--cocoa); font-weight: 500; }
+.note { font-size: .9rem; font-weight: 400; color: var(--ink); margin-top: 1.2rem; }
+
+/* footer */
+.foot { border-top: 2px solid var(--cocoa); padding-block: 2rem 2.5rem; font-size: .85rem; }
+.foot .wrap { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.4fr); gap: 1.5rem; }
+.foot .wordmark { font-size: 1rem; }
+.foot ul { margin: .3rem 0 0; padding: 0; list-style: none; }
+.foot li { margin-bottom: .25rem; }
+.foot small { color: var(--cocoa); }
+
+/* entrance — the single orchestrated moment (gate 12 fallback below) */
+@media (prefers-reduced-motion: no-preference) {
+  html { scroll-behavior: smooth; }
+  .hero .wrap { animation: rise .7s ease-out both; }
+  @keyframes rise { from { opacity: 0; transform: translateY(22px); } to { opacity: 1; transform: none; } }
+}
+@media (prefers-reduced-motion: reduce) {
+  .btn { transition: none; }
+}
+
+/* responsive */
+@media (max-width: 820px) {
+  .hero { min-height: 72vh; }
+  .chapter .wrap { grid-template-columns: minmax(0, 1fr); }
+  .chapter.flip .wrap { direction: ltr; }
+  .route-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .foot .wrap { grid-template-columns: minmax(0, 1fr); }
+}
+@media (max-width: 480px) {
+  .route-grid { grid-template-columns: minmax(0, 1fr); }
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="top">
+  <div class="wrap">
+    <a class="wordmark" href="#top">MEET INDIA JOURNEYS</a>
+    <nav class="topnav" aria-label="Page sections">
+      <a href="#journey">The Journey</a>
+      <a href="#route">The Route</a>
+      <a href="#plan">Plan a Journey</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+  <section class="hero" id="top">
+    <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4e/Kerala_backwaters%2C_Houseboats%2C_India.jpg/1920px-Kerala_backwaters%2C_Houseboats%2C_India.jpg"
+         width="1800" height="1200" alt="Houseboats moored on a wide Kerala backwater at dusk"
+         fetchpriority="high" loading="eager">
+    <div class="wrap">
+      <p class="kicker"><span>Kerala</span> — river and heritage journeys</p>
+      <h1>Meet India, slowly.</h1>
+      <p>Four stops from an old harbour to green tea hills — a journey you take at the pace of the water.</p>
+      <a class="btn" href="mailto:YOU@MEETINDIAJOURNEYS.example">Plan this journey</a>
+    </div>
+  </section>
+
+  <section class="chapter" id="journey" aria-labelledby="c1">
+    <div class="wrap">
+      <figure>
+        <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/1/16/Kochi_chinese_fishing-net-20080215-01a.jpg/1920px-Kochi_chinese_fishing-net-20080215-01a.jpg"
+             width="1800" height="1201" alt="Chinese fishing nets raised over the waterfront of Fort Kochi" loading="lazy">
+        <figcaption>Chinese fishing nets, Fort Kochi — Photo: Hans A. Rosbach, CC BY-SA 3.0, via Wikimedia Commons</figcaption>
+      </figure>
+      <div class="chapter-copy">
+        <p class="num">01</p>
+        <p class="place" id="c1">Kochi</p>
+        <h2 class="chtitle">The harbour that traded the world.</h2>
+        <p>Fort Kochi grew on spices and sails, and the Chinese fishing nets still lean over its waterfront — working, not posed. Heritage here is not behind glass; it is the street you walk to dinner.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="chapter flip" aria-labelledby="c2">
+    <div class="wrap">
+      <figure>
+        <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a6/Kerala_backwaters%2C_Canal%2C_Palm_trees%2C_India.jpg/1920px-Kerala_backwaters%2C_Canal%2C_Palm_trees%2C_India.jpg"
+             width="1800" height="1200" alt="Palm-lined canal in the Kerala backwaters" loading="lazy">
+        <figcaption>Kerala backwaters canal — Photo: Vyacheslav Argenberg, CC BY 4.0, via Wikimedia Commons</figcaption>
+      </figure>
+      <div class="chapter-copy">
+        <p class="num">02</p>
+        <p class="place" id="c2">Alappuzha — the backwaters</p>
+        <h2 class="chtitle">Days that arrive by water.</h2>
+        <p>Kettuvallam houseboats drift the Punnamada and the narrow canals beyond — rice barges turned into river rooms. Much of this world is reached by water and nothing else, which is exactly the point.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="chapter" aria-labelledby="c3">
+    <div class="wrap">
+      <figure>
+        <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/7/77/A_view_of_Periyar_Wildlife_Sanctuary_from_boat.jpg/1920px-A_view_of_Periyar_Wildlife_Sanctuary_from_boat.jpg"
+             width="1800" height="1200" alt="Boat on Periyar lake inside the wildlife sanctuary" loading="lazy">
+        <figcaption>Periyar lake from the boat — Photo: Sreedevi512, CC BY-SA 4.0, via Wikimedia Commons</figcaption>
+      </figure>
+      <div class="chapter-copy">
+        <p class="num">03</p>
+        <p class="place" id="c3">Periyar — the forest</p>
+        <h2 class="chtitle">The forest watches back.</h2>
+        <p>At Thekkady the landscape turns into a lake inside a sanctuary. The boat safari does the quiet work of looking; the morning does the rest.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="chapter flip" aria-labelledby="c4">
+    <div class="wrap">
+      <figure>
+        <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/0/01/Munnar_-_Lockhart_tea_plantation.jpg/1920px-Munnar_-_Lockhart_tea_plantation.jpg"
+             width="1800" height="716" alt="Tea plantation terraces rolling across the hills of Munnar" loading="lazy">
+        <figcaption>Lockhart tea plantation, Munnar — Photo: Ingo Mehling, CC BY-SA 4.0, via Wikimedia Commons</figcaption>
+      </figure>
+      <div class="chapter-copy">
+        <p class="num">04</p>
+        <p class="place" id="c4">Munnar — the tea hills</p>
+        <h2 class="chtitle">Green that climbs.</h2>
+        <p>Tea terraces climb the hills in silence, and the road from Periyar keeps a window seat busy the whole way. The journey ends high, where the air is cold and the view is planted.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="route" id="route" aria-labelledby="r1">
+    <div class="wrap">
+      <h2 id="r1">The route.</h2>
+      <div class="route-grid">
+        <div class="leg"><p class="num">01</p><h3>Kochi</h3><p>Old harbour, nets, spice lanes.</p></div>
+        <div class="leg"><p class="num">02</p><h3>Alappuzha</h3><p>Backwaters, houseboat nights.</p></div>
+        <div class="leg"><p class="num">03</p><h3>Periyar</h3><p>Lake and forest inside a sanctuary.</p></div>
+        <div class="leg"><p class="num">04</p><h3>Munnar</h3><p>Tea hills and cool air.</p></div>
+      </div>
+      <p>One thread from coast to hills: water.</p>
+    </div>
+  </section>
+
+  <section class="plan" id="plan" aria-labelledby="p1">
+    <div class="wrap">
+      <h2 id="p1">Plan this journey.</h2>
+      <p>Dates, group sizes and prices — confirm with the operator.</p>
+      <!-- shortcut: mailto is an RFC-2606 .example placeholder, swap with the operator's real contact before going live -->
+      <a class="btn" href="mailto:YOU@MEETINDIAJOURNEYS.example">Plan this journey</a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <div>
+      <a class="wordmark" href="#top">MEET INDIA JOURNEYS</a>
+      <p>Demo page — Kerala river and heritage journeys.</p>
+    </div>
+    <div>
+      <small>Photos via Wikimedia Commons (licenses as listed on each image). Design:</small>
+      <ul>
+        <li>Built with the signature skill — shape: Scroll Story, identity: Forest Confection.</li>
+        <li>Reference pages opened 22 Oct 2026: apple.com, simplychocolate.dk (Top-50 web-design report).</li>
+      </ul>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
